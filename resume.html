@@ -6,160 +6,156 @@
   <title>個人履歷</title>
   <style>
     body {
-  margin: 0;
-  font-family: "Segoe UI", sans-serif;
-  background: linear-gradient(135deg, #eef2ff, #f8fafc);
-}
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: linear-gradient(135deg, #eef2ff, #f8fafc);
+    }
 
-/* 整體卡片 */
-.container {
-  max-width: 1000px;
-  margin: 40px auto;
-  display: grid;
-  grid-template-columns: 320px 1fr;
-  background: white;
-  border-radius: 20px;
-  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
-  overflow: hidden;
-}
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      background: white;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      overflow: hidden;
+    }
 
-/* 左側（個人區） */
-.header {
-  background: linear-gradient(180deg, #6c8cff, #4f6fe0);
-  color: white;
-  text-align: center;
-  padding: 40px 20px;
-}
+    .header {
+      background: linear-gradient(180deg, #6c8cff, #4f6fe0);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
 
-.header img {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 5px solid white;
-  margin-bottom: 15px;
-}
+    .header img {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
+      margin-bottom: 15px;
+    }
 
-.header h1 {
-  margin: 10px 0 5px;
-  font-size: 24px;
-}
+    .header h1 { margin: 10px 0 5px; }
+    .header p { margin: 0; opacity: 0.9; }
 
-.header p {
-  margin: 0;
-  opacity: 0.9;
-  font-size: 14px;
-}
+    .section {
+      padding: 25px 30px;
+      border-bottom: 1px solid #f0f0f0;
+    }
 
-/* 右側內容區 */
-.section {
-  padding: 25px 30px;
-  border-bottom: 1px solid #f0f0f0;
-}
+    .section h2 {
+      margin-bottom: 12px;
+      color: #4f6fe0;
+      border-left: 4px solid #6c8cff;
+      padding-left: 10px;
+    }
 
-.section h2 {
-  margin-bottom: 12px;
-  color: #4f6fe0;
-  font-size: 18px;
-  border-left: 4px solid #6c8cff;
-  padding-left: 10px;
-}
+    .skills span {
+      display: inline-block;
+      background: #eef2ff;
+      color: #4f6fe0;
+      padding: 6px 12px;
+      margin: 6px;
+      border-radius: 20px;
+      font-size: 13px;
+    }
 
-/* 技能標籤 */
-.skills span {
-  display: inline-block;
-  background: #eef2ff;
-  color: #4f6fe0;
-  padding: 6px 12px;
-  margin: 6px;
-  border-radius: 20px;
-  font-size: 13px;
-  transition: 0.3s;
-}
+    .btn {
+      display: block;
+      width: 220px;
+      margin: 30px auto;
+      padding: 12px;
+      background: linear-gradient(90deg, #6c8cff, #4f6fe0);
+      color: white;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      text-align: center;
+    }
 
-.skills span:hover {
-  background: #6c8cff;
-  color: white;
-}
-
-/* 按鈕 */
-.btn {
-  display: block;
-  width: 220px;
-  margin: 30px auto;
-  padding: 12px;
-  background: linear-gradient(90deg, #6c8cff, #4f6fe0);
-  color: white;
-  border: none;
-  border-radius: 25px;
-  cursor: pointer;
-  text-align: center;
-  font-weight: bold;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-/* 手機版 */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .header {
-    border-bottom: 1px solid rgba(255,255,255,0.2);
-  }
-}
+    @media (max-width: 768px) {
+      .container { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
 
 <div class="container">
   <div class="header">
-    <!-- 照片路徑：images 資料夾 -->
     <img src="images/photo.jpg" alt="個人照片">
-    <h1 id="name">莊某某</h1>
-    <p id="title">亞洲大學學生</p>
+    <h1>莊某某</h1>
+    <p>亞洲大學學生</p>
   </div>
 
-  <div class="section">
-    <h2>基本資料</h2>
-    <p>學號：114018024</p>
-    <p>Email：example@email.com</p>
-    <p>電話：0912-345-678</p>
-  </div>
-
-  <div class="section">
-    <h2>自我介紹</h2>
-    <p id="about">我是一名對語言治療領域有興趣的學生，未來希望走臨床路線，幫助更多需要的人。</p>
-  </div>
-
-  <div class="section">
-    <h2>技能</h2>
-    <div class="skills">
-      <span>溝通能力</span>
-      <span>同理心</span>
-      <span>基礎醫療知識</span>
-      <span>HTML</span>
+  <div>
+    <div class="section">
+      <h2>基本資料</h2>
+      <p>學號：114018024</p>
+      <p>Email：example@email.com</p>
+      <p>電話：0912-345-678</p>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>學歷</h2>
-    <p>亞洲大學 - 就讀中</p>
-  </div>
+    <div class="section">
+      <h2>自我介紹</h2>
+      <p id="about">我是一名對語言治療領域有興趣的學生，未來希望走臨床路線，幫助更多需要的人。</p>
+    </div>
 
-  <button class="btn" onclick="changeText()">點我改變自我介紹</button>
+    <div class="section">
+      <h2>職涯目標</h2>
+      <p>未來希望成為語言治療師，投入臨床工作並持續精進專業能力。</p>
+    </div>
+
+    <div class="section">
+      <h2>技能</h2>
+      <div class="skills">
+        <span>溝通能力</span>
+        <span>同理心</span>
+        <span>觀察能力</span>
+        <span>基礎醫療知識</span>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>學歷</h2>
+      <p>亞洲大學 - 就讀中</p>
+    </div>
+
+    <div class="section">
+      <h2>相關課程</h2>
+      <p>語言發展學、聽力學概論、心理學、解剖生理學</p>
+    </div>
+
+    <div class="section">
+      <h2>相關經驗</h2>
+      <ul>
+        <li>完成語音分析與報告</li>
+        <li>參與小組簡報與合作</li>
+        <li>參與志工活動</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2>證照與檢定</h2>
+      <p>TOEIC（準備中）</p>
+    </div>
+
+    <div class="section">
+      <h2>語言能力</h2>
+      <p>中文：母語</p>
+      <p>英文：基礎</p>
+    </div>
+
+    <button class="btn" onclick="changeText()">點我改變自我介紹</button>
+  </div>
 </div>
 
 <script>
-  function changeText() {
-    const about = document.getElementById("about");
-    about.innerText = "我正在持續精進自己，希望未來能成為一名專業的語言治療師！";
-  }
+function changeText() {
+  document.getElementById("about").innerText = "我正在持續精進自己，希望未來能成為一名專業的語言治療師！";
+}
 </script>
 
 </body>
