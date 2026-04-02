@@ -92,6 +92,11 @@
   
 
     <p>亞洲大學學生</p>
+    <audio controls>
+  
+  <source src="mp3/bg.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
   </div>
 
   <div>
@@ -160,24 +165,6 @@
 function changeText() {
   document.getElementById("about").innerText = "我正在持續精進自己，希望未來能成為一名專業的語言治療師！";
 }
-</script>
-<audio id="bgm" autoplay loop playsinline>
-  <source src="mp3/bg.mp3" type="audio/mpeg">
-</audio>
 
-<script>
-  const audio = document.getElementById("bgm");
-
-  // 嘗試直接播放
-  audio.play().catch(() => {
-    // 若被擋，快速解除靜音再播放
-    audio.muted = true;
-    audio.play();
-
-    setTimeout(() => {
-      audio.muted = false;
-    }, 100);
-  });
-</script>
 </body>
 </html>
